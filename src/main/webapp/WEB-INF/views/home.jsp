@@ -42,11 +42,20 @@
 		<header class="masthead bg-primary text-white text-center">
 			<div class="container">
 				<img class="img-fluid mb-5 d-block mx-auto" src="${imageIconPath}" alt="">
-				<h1 class="text-uppercase mb-0">Home</h1>
+				<h1 class="text-uppercase mb-0">NAME: ${name}</h1>
 				<hr class="star-light">
 				<h2 class="font-weight-light mb-0">
-					ID:${userId} <br>NAME: ${name}
+					お知らせ一覧・更新情報
 				</h2>
+				<hr class="star-dark mb-5">
+				<p class="lead　font-over">
+					<c:forEach var="notice" items="${noticeList}">
+						${notice.getNoticeDay()}<br>
+						${notice.getTitle()}<br>
+						${notice.getNoticeInfo()}<br>
+						<hr class="star-dark mb-5">
+					</c:forEach>
+				</p>
 			</div>
 		</header>
 	</f:form>
@@ -65,8 +74,22 @@
 			</div>
 		</div>
 	</section>
-
 	<!-- WEB-アプリケーション-開発ラボ -->
+	<section class="portfolio" id="portfolio">
+		<div class="container">
+			<h2 class="text-center text-uppercase text-secondary mb-0">投票-開発ラボ</h2>
+			<hr class="star-dark mb-5">
+			<div class="row">
+				<div class="col-lg-8 mx-auto">
+					<a class="portfolio-item d-block mx-auto" href="#vote">
+						<img class="img-fluid mb-5 d-block mx-auto" src="<c:url value="/resources/images/vote_chara.png" />" alt="WebGl">
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- WEB-アプリケーション-開発ラボ
 	<section class="portfolio" id="portfolio">
 		<div class="container">
 			<h2 class="text-center text-uppercase text-secondary mb-0">WEB-アプリケーション-開発ラボ</h2>
@@ -79,7 +102,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<!-- Book-App -->
 	<section class="portfolio" id="portfolio">
@@ -170,7 +193,34 @@
 			</div>
 		</div>
 	</div>
-
+	<!-- Portfolio Vote -->
+	<div class="portfolio-modal mfp-hide" id="vote">
+		<div class="portfolio-modal-dialog bg-white">
+			<a class="close-button d-none d-md-block portfolio-modal-dismiss"
+				href="#"> <i class="fa fa-3x fa-times"></i>
+			</a>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 mx-auto">
+						<h2 class="text-secondary text-uppercase text-center font-over">投票グランプリ！！</h2>
+						<img class="img-fluid mb-5"
+							src="<c:url value="/resources/images/vote_chara.png" />" alt="">
+						<hr class="star-dark mb-5">
+						<p id="font-over-samll">
+							<br>意見が別れた．．． 誰が一番イケてるか．．．
+							<br>誰が一番おしゃれな奴か．．．迷ったら投票だ！
+							<br>より投票されるユーザは、誰か！！
+							<br>そして一位に輝くの誰か決める( ｀ー´)ノ
+							<br>そんなイベントを時たまやっています(笑)
+							<br>開催イベントは、お知らせ・更新情報を参考に
+						</p>
+						<a class="mx-auto btn btn-primary btn-lg rounded-pill"
+							href="/DevelopLab/vote"> 投票画面へ</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- Portfolio Modal MobileApp -->
 	<div class="portfolio-modal mfp-hide" id="mobileApp">
 		<div class="portfolio-modal-dialog bg-white">
@@ -230,6 +280,9 @@
 			href="#page-top"> <i class="fa fa-chevron-up"></i>
 		</a>
 	</div>
+
+	<!-- Footer -->
+	<jsp:include page="footer.jsp" flush="true" />
 
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="<c:url value="/resources/vendor/jquery/jquery.min.js" />"></script>

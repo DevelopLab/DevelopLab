@@ -19,6 +19,7 @@
 	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/freelancer.min.css" />">
 	<!-- Font Size Over -->
 	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/font-size-over.css" />">
+	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/icon-img.css" />">
 </head>
 <body id="page-top">
 
@@ -51,7 +52,7 @@
 			<hr class="star-dark mb-5">
 			<div class="row">
 				<div class="col-lg-8 mx-auto">
-					<a class=" mx-auto portfolio-item btn-primary btn btn-lg" href="#iosUdid">
+					<a class="mx-auto portfolio-item btn-primary btn btn-lg" href="#iosUdid">
 						端末のセットアップ
 					</a>
 				</div>
@@ -102,7 +103,7 @@
 				<div class="row">
 					<div class="col-lg-8 mx-auto">
 						<a class="portfolio-item d-block mx-auto" href="#${app.getAppId()}">
-							<img class="img-fluid mb-5 d-block mx-auto" src="${app.getAppIcon()}" alt="WebGl">
+							<img id="icon-img" class="img-fluid mb-5 d-block mx-auto" src="${app.getAppIcon()}" alt="WebGl">
 						</a>
 					</div>
 				</div>

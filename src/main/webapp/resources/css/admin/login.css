@@ -286,3 +286,9 @@ html, body {
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 480px) {
+	.form {
+		width: 320px;
+	}
+}

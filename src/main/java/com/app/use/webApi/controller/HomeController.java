@@ -54,16 +54,11 @@ public class HomeController {
 		model.addAttribute("name", userName.toString());
 		model.addAttribute("imageIconPath", homeForm.getImageIcon());
 
-		// お知らせ情報を取得
-		List<Notice> noticeList = homeService.userNotice(6); // 最新の6件を取得する。
-		int number = 1;
-		for (Notice notice : noticeList) {
-			 model.addAttribute("notice" + number, notice);
-			 model.addAttribute("title" + number, notice.getTitle());
-			 model.addAttribute("noticeInfo" + number, notice.getNoticeInfo());
-			 model.addAttribute("noticeDay" + number, StringUtil.dayFormat(notice.getNoticeDay()));
-			 number++;
-		}
+		List<Notice> noticeList = homeService.userNotice(5); // 最新の6件を取得する。
+		noticeList.forEach(notice ->
+			notice.setNoticeDay(StringUtil.dayFormat(notice.getNoticeDay()))
+		);
+		model.addAttribute("noticeList", noticeList);
 
 		return "home";
 	}

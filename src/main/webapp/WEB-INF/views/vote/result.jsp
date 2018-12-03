@@ -12,6 +12,10 @@
 		<link rel="stylesheet" href="<c:url value="/resources/css/paper-blizzard.css"/>" />
 	</head>
 	<body class="is-preload">
+		<c:if test="${result}">
+			<h1><a href="/DevelopLab/vote">投票画面に戻る</a></h1>
+		</c:if>
+		<h1><a href="/DevelopLab/home">ホームに戻る</a></h1>
 		<canvas id="canvas">
 		</canvas>
 		<c:if test="${result}">

@@ -6,7 +6,7 @@
 <head>
   <link rel="shortcut icon" href="<c:url value="/resources/images/faviconIco.png" />" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Admin Login Form</title>
+  <title>Admin Home Form</title>
   <meta http-equiv="Content-Script-Type" content="text/javascript; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/admin/login.css" />">

@@ -46,14 +46,9 @@
 			<h2 class="text-center text-uppercase text-secondary mb-0">BOOK APP</h2>
 			<hr class="star-dark mb-5">
 			<div class="row">
-				<div class="col-md-6 col-lg-4">
+				<div class="col-lg-8 mx-auto">
 					<a class="portfolio-item d-block mx-auto" href="#webGL">
-						<div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-							<div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-								<i class="fa fa-search-plus fa-3x"> 電子書籍 </i>
-							</div>
-						</div>
-						<img class="img-fluid" src="<c:url value="/resources/images/book.png" />" alt="Book">
+						<img class="img-fluid mb-5 d-block mx-auto" src="<c:url value="/resources/images/book.png" />" alt="Book">
 					</a>
 				</div>
 			</div>
