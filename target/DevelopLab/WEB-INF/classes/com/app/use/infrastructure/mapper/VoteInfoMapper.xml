@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.app.use.infrastructure.dao.VoteInfoDao">
+
+  <select id="findVoteId" parameterType="com.app.use.entity.VoteInfo" resultType="com.app.use.entity.VoteInfo">
+    SELECT
+    	*
+    FROM
+    	vote_info
+    WHERE
+    	vote_id = ${vote_id}
+  </select>
+
+  <select id="findIdVoteInfo" parameterType="com.app.use.entity.VoteInfo" resultType="com.app.use.entity.VoteInfo">
+    SELECT
+    	*
+    FROM
+    	vote_info
+    WHERE
+    	vote_id = ${vote_id}
+    	AND vote_number = ${vote_number}
+  </select>
+
+</mapper>

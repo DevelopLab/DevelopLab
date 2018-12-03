@@ -1,0 +1,39 @@
+@charset "UTF-8";
+body {
+	position: absolute;
+}
+
+.background {
+	background-image: url(../images/top.jpg);
+	position: absolute;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+.gradient {
+	background: linear-gradient(45deg, rgba(93, 123, 161, 0.466), rgba(0, 79, 248, 0.418));
+	background-size: 400% 400%;
+	height: 100vh;
+
+	-webkit-animation: stage 4s ease infinite;
+	-moz-animation: stage 4s ease infinite;
+    animation: stage 4s ease infinite;
+}
+	@-webkit-keyframes stage {
+	    0%{background-position:0% 51%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 51%}
+	}
+	@-moz-keyframes stage {
+	    0%{background-position:0% 51%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 51%}
+	}
+	@keyframes stage {
+	    0%{background-position:0% 51%}
+	    50%{background-position:100% 50%}
+	    100%{background-position:0% 51%}
+    }

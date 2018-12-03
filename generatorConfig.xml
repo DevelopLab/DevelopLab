@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+  <classPathEntry location="C:\Users\FMV\.m2\repository\mysql\mysql-connector-java\5.1.34"/>
+  <context id="context1">
+    <jdbcConnection
+        driverClass="com.mysql.jdbc.Driver"
+        connectionURL="jdbc:mysql://omoikane.cw8d3ep4pt8m.ap-northeast-1.rds.amazonaws.com:3306/omoikane_db"
+        userId="master" password="omoikane1192"
+    />
+    <javaModelGenerator targetPackage="com.app.use.entity" targetProject="C:\pleiades\workspace\DevelopLab\src\main\java\com\app\use\entity\" />
+    <sqlMapGenerator targetPackage="com.app.use.infrastructure.dao" targetProject="C:\pleiades\workspace\DevelopLab\src\main\java\com\app\use\infrastructure\dao\" />
+    <javaClientGenerator targetPackage="com.app.use.infrastructure.mapper" targetProject="C:\pleiades\workspace\DevelopLab\src\main\java\com\app\use\infrastructure\mapper\" type="XMLMAPPER" />
+    <table schema="omoikane_db" tableName="vote" />
+  </context>
+</generatorConfiguration>
