@@ -70,7 +70,7 @@ public class UserProfileController {
 	private void setModel(UserProfileForm userProfileForm, Model model) {
 		model.addAttribute("name", userProfileForm.getName());
 		model.addAttribute("imageIconPath", userProfileForm.getImageIcon());
-		model.addAttribute("genderType", GenderType.values());
-		model.addAttribute("sexType", SexType.values());
+//		model.addAttribute("genderType", GenderType.values());
+//		model.addAttribute("sexType", SexType.values());
 	}
 }

@@ -13,6 +13,8 @@ public interface VoteInfoRepository {
 
 	Vote findIdVote(Vote vote);
 
+	boolean register(Vote vote);
+
 	List<VoteInfo> findVoteInfo(VoteInfo voteInfo);
 
 	VoteInfo findIdVoteInfo(VoteInfo voteInfo);

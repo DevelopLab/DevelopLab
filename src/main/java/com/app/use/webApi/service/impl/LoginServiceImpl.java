@@ -72,7 +72,7 @@ public class LoginServiceImpl implements LoginService {
 		}
 
 		// ユーザ権限の場合
-		if (AuthorityType.ADMIN.equals(user.getAuthority())) {
+		if (!AuthorityType.ADMIN.equals(user.getAuthority())) {
 			return false;
 		}
 

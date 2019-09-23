@@ -450,10 +450,23 @@ a:active, a:focus, a:hover {
 	opacity: 1;
 }
 
-/*トップページのNEWアイコン
+/*のアイコン
 ---------------------------------------------------------------------------*/
 .newicon {
 	background: #F00;	/*背景色*/
+	color: #FFF;		/*文字色*/
+	font-size: 70%;
+	line-height: 1.5;
+	padding: 2px 5px;
+	border-radius: 2px;
+	margin: 0px 5px;
+	vertical-align: text-top;
+}
+
+/*トップページのNEWアイコン
+---------------------------------------------------------------------------*/
+.adminicon {
+	background: #1a8cff;	/*背景色*/
 	color: #FFF;		/*文字色*/
 	font-size: 70%;
 	line-height: 1.5;

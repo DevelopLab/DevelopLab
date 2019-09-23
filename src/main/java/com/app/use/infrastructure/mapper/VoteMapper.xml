@@ -14,7 +14,7 @@
     	vote_end_date <![CDATA[ > ]]> #{nowDate}
   </select>
 
-  <select id="findIdVote" parameterType="com.app.use.entity.VoteInfo" resultType="com.app.use.entity.Vote">
+  <select id="findIdVote" parameterType="com.app.use.entity.Vote" resultType="com.app.use.entity.Vote">
     SELECT
     	*
     FROM
@@ -22,5 +22,28 @@
     WHERE
     	vote_id = ${vote_id}
   </select>
+
+  <insert id="insert" parameterType="com.app.use.entity.Vote">
+	INSERT INTO vote (
+	  title
+	  , `comment`
+	  , image_icon
+	  , deadline_date
+	  , vote_start_date
+	  , vote_end_date
+	  , create_date
+	  , update_date
+	)
+	VALUES (
+	  ${title}
+	  , ${comment}
+	  , ${image_icon}
+	  , ${deadline_date}
+	  , ${vote_start_date}
+	  , ${vote_end_date}
+	  , NOW(8)
+	  , NOW(8)
+	)
+  </insert>
 
 </mapper>

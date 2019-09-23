@@ -53,10 +53,15 @@
 					<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
 						href="/DevelopLab/logout">LOGOUT</a></li>
-					<c:if test="${userAuthority != USER}">
+					<c:if test="${userAuthority != 'USER'}">
 						<li class="nav-item mx-0 mx-lg-1 newicon"><a
 							class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
 							href="/DevelopLab/developer/login">DEVELOPER LOGIN</a></li>
+					</c:if>
+					<c:if test="${userAuthority == 'ADMIN'}">
+						<li class="nav-item mx-0 mx-lg-1 adminicon"><a
+							class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+							href="/DevelopLab/admin/login">ADMIN LOGIN</a></li>
 					</c:if>
 				</ul>
 			</div>

@@ -10,4 +10,6 @@ public interface VoteDao {
 	List<Vote> findVote(Date nowDate);
 
 	Vote findIdVote(Vote vote);
+
+	boolean insert(Vote vote);
 }

@@ -12,24 +12,24 @@
 
 	<!-- Application Loggers -->
 	<logger name="com.app.use">
-		<level value="INFO" />
+		<level value="DEBUG" />
 	</logger>
 
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">
-		<level value="INFO" />
+		<level value="DEBUG" />
 	</logger>
 
 	<logger name="org.springframework.beans">
-		<level value="INFO" />
+		<level value="DEBUG" />
 	</logger>
 
 	<logger name="org.springframework.context">
-		<level value="INFO" />
+		<level value="DEBUG" />
 	</logger>
 
 	<logger name="org.springframework.web">
-		<level value="INFO" />
+		<level value="DEBUG" />
 	</logger>
 
 	<!-- Root Logger -->

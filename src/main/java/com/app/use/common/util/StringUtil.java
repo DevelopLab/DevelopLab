@@ -20,6 +20,21 @@ public class StringUtil {
 	}
 
 	/**
+	 * 日時フォーマット(yyyy-MM-dd HH:mm).
+	 * @param String DATE
+	 * @return yyyy-MM-dd HH:mm
+	 */
+	public static Date datetimeParse(String date) {
+		Date parseDate = null;
+		try {
+			parseDate = DATETIME.parse(date);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return parseDate;
+	}
+
+	/**
 	 * 日付フォーマット(yyyy-MM-dd).
 	 *
 	 * @param birthday yyyyMMdd

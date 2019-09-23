@@ -6,11 +6,14 @@ import java.util.List;
 import com.app.use.common.dto.VoteInfoDto;
 import com.app.use.entity.VoteInfo;
 import com.app.use.entity.VoteInfoUser;
+import com.app.use.webApi.form.VoteForm;
 import com.app.use.webApi.form.VoteInfoForm;
 
 public interface VoteInfoService {
 
 	VoteInfoDto getVoteInfo(Date nowDate);
+
+	boolean registerVote(VoteForm voteForm);
 
 	boolean registerVoteInfo(VoteInfoForm voteInfoForm);
 

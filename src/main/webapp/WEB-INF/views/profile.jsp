@@ -57,10 +57,12 @@
 							</div>
 						</div>
 						<div class="control-group">
+							<label>性別</label>
 							<div class="form-group floating-label-form-group controls mb-0 pb-2">
 								<f:select class="form-control" name="gender" path="gender" placeholder="性別" required="required">
-									<f:option value="" label="性別" />
-									<f:options items="${genderType}" itemValue="kye" itemLabel="value" />
+									<f:option value="MALE" label="男性" />
+									<f:option value="FEMALE" label="女性" />
+									<f:option value="NEUTRAL" label="中性" />
 								</f:select>
 								<p class="help-block text-danger"></p>
 							</div>
@@ -85,8 +87,10 @@
 							<label>属性</label>
 							<div class="form-group floating-label-form-group controls mb-0 pb-2">
 								<f:select class="form-control" name="sex" path="sex" placeholder="属性" required="required">
-									<f:option value="" label="属性" />
-									<f:options items="${sexType}" itemValue="kye" itemLabel="value" />
+									<f:option value="M" label="ノーマルM" />
+									<f:option value="S" label="ノーマルS" />
+									<f:option value="DM" label="ドM" />
+									<f:option value="DS" label="ドS" />
 								</f:select>
 								<p class="help-block text-danger"></p>
 							</div>

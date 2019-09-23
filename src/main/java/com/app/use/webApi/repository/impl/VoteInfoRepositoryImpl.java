@@ -39,6 +39,12 @@ public class VoteInfoRepositoryImpl implements VoteInfoRepository {
 	}
 
 	@Override
+	public boolean register(Vote vote) {
+		boolean result = voteDao.insert(vote);
+		return result;
+	}
+
+	@Override
 	public List<VoteInfo> findVoteInfo(VoteInfo voteInfo) {
 		List<VoteInfo> voteInfoList = voteInfoDao.findVoteId(voteInfo);
 		return voteInfoList;
@@ -61,5 +67,4 @@ public class VoteInfoRepositoryImpl implements VoteInfoRepository {
 		List<VoteInfoUser> voteInfoUserList = voteInfoUserDao.findVoteInfoUser(voteInfoUser);
 		return voteInfoUserList;
 	}
-
 }

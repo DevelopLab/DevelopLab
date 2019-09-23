@@ -79,7 +79,7 @@ public class VoteInfoController {
 		Date nowDate = new Date();
 		VoteInfoDto voteInfoDto = voteInfoService.getVoteInfo(nowDate);
 		if (voteInfoDto == null) {
-			model.addAttribute("false", false);
+			model.addAttribute("result", false);
 			return "/vote/result";
 		}
 

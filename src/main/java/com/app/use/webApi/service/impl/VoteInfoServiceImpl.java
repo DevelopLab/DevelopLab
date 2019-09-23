@@ -7,9 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.app.use.common.dto.VoteInfoDto;
+import com.app.use.common.util.StringUtil;
 import com.app.use.entity.Vote;
 import com.app.use.entity.VoteInfo;
 import com.app.use.entity.VoteInfoUser;
+import com.app.use.webApi.form.VoteForm;
 import com.app.use.webApi.form.VoteInfoForm;
 import com.app.use.webApi.repository.VoteInfoRepository;
 import com.app.use.webApi.service.VoteInfoService;
@@ -19,6 +21,19 @@ public class VoteInfoServiceImpl implements VoteInfoService {
 
 	@Autowired
 	private VoteInfoRepository voteInfoRepository;
+
+	@Override
+	public boolean registerVote(VoteForm voteForm) {
+		Vote vote = new Vote();
+		vote.setTitle(voteForm.getTitle());
+		vote.setComment(voteForm.getComment());
+		vote.setImageIcon(voteForm.getImageIcon());
+		vote.setDeadlineDate(StringUtil.datetimeParse(voteForm.getDeadlineDate()));
+		vote.setVoteStartDate(StringUtil.datetimeParse(voteForm.getStartDate()));
+		vote.setVoteEndDate(StringUtil.datetimeParse(voteForm.getEndDate()));
+		boolean result = voteInfoRepository.register(vote);
+		return result;
+	}
 
 	@Override
 	public VoteInfoDto getVoteInfo(Date nowDate) {
@@ -58,5 +73,4 @@ public class VoteInfoServiceImpl implements VoteInfoService {
 
 		return voteInfoUserList;
 	}
-
 }
